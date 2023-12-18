@@ -512,3 +512,19 @@ tr {
   align-items: center;
   pointer-events: none;
 }
+
+
+.modal-header {
+  @include padding(10px);
+  background: $branding1;
+  color: $white;
+  border-radius: 0;
+  border: 0;
+
+  .btn-close {
+    filter: invert(1);
+    -webkit-filter: invert(1);
+    opacity: 1;
+    box-shadow: none;
+  }
+}

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 //scss
 import style from "./Header.module.scss";
@@ -11,9 +13,15 @@ import Input from "../Input/Input";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { Link } from "react-router-dom";
+import Rules from "../Rules/Rules";
 
 const Header = () => {
   const [searchInput, setSearchInput] = useState();
+  const [show, setShow] = useState(false);
+
+  const showModal = () => {
+    setShow(!show);
+  };
 
   const showSearch = () => {
     setSearchInput(!searchInput);
@@ -52,8 +60,23 @@ const Header = () => {
           </div>
         </div>
         <div className={`${style.rules} ms-3`}>
-          <strong>Rules</strong>
+          <strong onClick={showModal}>Rules</strong>
         </div>
+        {show && (
+          <Modal size="xl" show={show} onHide={showModal} scrollable>
+            <Modal.Header closeButton>
+              <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Rules />
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="danger" onClick={showModal}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        )}
         <div className={`${style.userBalance} ms-1 ms-xl-3`}>
           <div className="">
             <span>Balance:</span>
