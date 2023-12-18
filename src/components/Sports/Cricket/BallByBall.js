@@ -70,7 +70,7 @@ const BallByBall = () => {
                 Round ID: 6245429954513
               </span>
             </div>
-            <div className="d-xl-none w-full">
+            <div className="d-xl-none w-100">
               <Tabs
                 defaultActiveKey="profile"
                 id="uncontrolled-tab-example"
