@@ -48,8 +48,9 @@
         display: flex;
         border: none;
         background-color: $branding1;
+
         .nav-item {
-          flex: auto;          
+          flex: auto;
           @include padding(10px 0px);
 
           button {
@@ -185,11 +186,15 @@
   .right-sidebar {
     width: 450px;
     padding: 0;
-    min-height: calc(100vh - 135px);
-    max-height: calc(100vh - 135px);
     overflow-x: hidden;
     overflow-y: auto;
     margin-left: 2px;
+
+    &.active {
+      position: fixed;
+      top: 0;
+      right: 5px;
+    }
 
     @include media-breakpoint-between(xl, xxl) {
       width: 350px;
@@ -198,10 +203,15 @@
 
     @include media-breakpoint-up(xxl) {
       width: 400px;
+
     }
 
     @include media-breakpoint-down(xl) {
       display: none;
+
+      &.active {
+        position: static;
+      }
     }
   }
 }
