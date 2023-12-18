@@ -7,9 +7,7 @@ import { Modal } from "react-bootstrap";
 //scss
 import "./Cricket.scss";
 
-//images
-import liveTv from "../../../assets/lock.jpg";
-import MatchData from "./MatchData";
+//components
 import BallByBallData from "./BallByBallData";
 
 const BallByBall = () => {

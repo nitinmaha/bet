@@ -240,7 +240,7 @@ const BallByBallData = () => {
         </div>
         <div className="casino-remark mt-1">
           <div className="remark-icon">
-            <img src="https://g1ver.sprintstaticdata.com/v12/static/front/img/icons/remark.png" />
+            <img src="https://g1ver.sprintstaticdata.com/v12/static/front/img/icons/remark.png" alt="sprint" />
           </div>
           <div className="moving-text-wrap">
             <div class="moving-text">
