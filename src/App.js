@@ -17,6 +17,7 @@ import TeenPatti from "./pages/TeenPatti/TeenPatti";
 import Poker from "./pages/Poker/Poker";
 import Lucky7 from "./pages/Lucky7/Lucky7";
 import CricketDetail from "./pages/Details/CricketDetail";
+import BallByBall from "./components/Sports/Cricket/BallByBall";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -53,6 +54,7 @@ function App() {
             <Route path="poker" element={<Poker />} />
             <Route path="lucky7" element={<Lucky7 />} />
             <Route path="cricket-detail" element={<CricketDetail />} />
+            <Route path="ball-by-ball" element={<BallByBall />} />
           </Route>
         </Routes>
       )}

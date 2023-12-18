@@ -40,7 +40,7 @@ const Home = () => {
               <div className="bet-table-body">
                 <div className="bet-table-row">
                   <div className="bet-nation-name">
-                    <Link className="bet-nation-game-name" href="#">
+                    <Link className="bet-nation-game-name" to="/ball-by-ball">
                       <span>Ball by Ball</span>
                     </Link>
                     <div className="game-icons">
