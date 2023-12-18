@@ -134,11 +134,11 @@ export default function Main() {
         <div className={style.sideBar}>
           <Sidebar />
         </div>
-        <div className={`${style.liveEvents} d-xl-none`}>
+        <div className={`${style.liveEvents} liveEvents d-xl-none`}>
           <LiveEvents />
         </div>
 
-        <div className={`${style.customLinks} d-xl-none`}>
+        <div className={`${style.customLinks} customLinks d-xl-none`}>
           <ul>
             <li>
               <Link to="#">Lotterys</Link>
@@ -160,7 +160,7 @@ export default function Main() {
             </li>
           </ul>
         </div>
-        <div className={style.content}>
+        <div className={`${style.content} content`}>
           <Outlet />
         </div>
       </div>

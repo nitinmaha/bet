@@ -16,6 +16,7 @@ import Cards32 from "./pages/Cards32/Cards32";
 import TeenPatti from "./pages/TeenPatti/TeenPatti";
 import Poker from "./pages/Poker/Poker";
 import Lucky7 from "./pages/Lucky7/Lucky7";
+import CricketDetail from "./pages/Details/CricketDetail";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -51,6 +52,7 @@ function App() {
             <Route path="teenpatti" element={<TeenPatti />} />
             <Route path="poker" element={<Poker />} />
             <Route path="lucky7" element={<Lucky7 />} />
+            <Route path="cricket-detail" element={<CricketDetail />} />
           </Route>
         </Routes>
       )}

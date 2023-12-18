@@ -111,20 +111,25 @@ a {
   }
 }
 
-.moving-text:hover{
+.moving-text:hover {
   animation-play-state: paused;
 }
 
 /* The animation */
-@keyframes marquee{
-  0%{transform: translateX(100%);}
-  100%{transform: translateX(-100%);}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* media query to enable animation for only those who want it */
 @media (prefers-reduced-motion: no-preference) {
-  .moving-text{
-      animation: marquee 30s linear infinite;
+  .moving-text {
+    animation: marquee 30s linear infinite;
   }
 }
 
@@ -142,6 +147,63 @@ a {
     overflow-x: hidden;
     @include padding(10px);
   }
+}
+
+/*Table*/
+
+.table {
+  background-color: $xlt-gray;
+  color: $dark-gray;
+  margin-bottom: 0;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: $xlt-gray;
+}
+
+.table tbody th {
+  background-color: $gray-c;
+}
+
+.table tbody tr {
+  background-color: $gray-c;
+  border-color: $gray-c;
+}
+
+.table tbody {
+  border: 0 !important;
+}
+
+.table th {
+  font-size: 14px;
+}
+
+.table td {
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 2px 8px;
+  vertical-align: middle;
+}
+
+.table td:first-child,
+.table th:first-child {
+  padding-left: 10px;
+}
+
+.modal .table td,
+.modal .table th {
+  padding: 5px;
+  font-size: 16px;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 .bet-table-header {

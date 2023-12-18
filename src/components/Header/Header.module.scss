@@ -102,7 +102,7 @@
 
 .userDropdown {
   &::after {
-    display: none;
+    display: none !important;
   }
 
   button {

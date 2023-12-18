@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./Treeview.scss";
 import style from "../Sidebar.module.scss";
@@ -31,6 +32,7 @@ const AllSports = [
                 id: "2-1",
                 name: "Hydrabad XI v Chennai XI",
                 children: [],
+                link: "/cricket-detail",
               },
             ],
           },
@@ -405,17 +407,19 @@ const TreeNode = ({ node }) => {
 
   return (
     <div className={style.treeNode}>
-      <div className={`${style.nodeToogle} ${isExpanded ? "expanded" : ""}`}>
+      <div
+        className={`${style.nodeToogle} ${isExpanded ? "expanded" : ""}`}
+        onClick={handleToggle}
+      >
         {node.children.length > 0 && (
           <span
-            onClick={handleToggle}
             className={
               isExpanded && node.children.length > 0 ? `${style.active}` : ""
             }
           ></span>
         )}
         {/* {isExpanded && node.children.length > 0 ? "" : ""} */}
-        {node.name}
+        {node.link ? <Link to={node.link}>{node.name}</Link> : node.name}
       </div>
       {isExpanded && (
         <ul className={style.childNodes}>
