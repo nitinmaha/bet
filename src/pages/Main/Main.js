@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet, NavLink, Link } from "react-router-dom";
+import { Modal } from "react-bootstrap";
 
 //components
 import Header from "../../components/Header/Header";
@@ -10,10 +11,38 @@ import style from "./Main.module.scss";
 import Footer from "../../components/Footer/Footer";
 import LiveEvents from "../../components/LiveEvents/LiveEvents";
 
+//images
+import SplashImg from "../../assets/png/wel-1702816082206.png";
+
 export default function Main() {
+  const [show, setShow] = useState(true);
+
+  const closeModalHandler = () => {
+    localStorage.setItem("seenPopUp", true);
+    setShow(false);
+  };
+
+  useEffect(() => {
+    const returningUser = localStorage.getItem("seenPopUp");
+    setShow(!returningUser);
+  }, []);
+
   return (
     <div>
       <Header />
+      {show && (
+        <Modal size="lg" show={show} onHide={closeModalHandler} scrollable>
+          <Modal.Header closeButton>
+            <Modal.Title>
+              Beware Of Phishing Websites Before Login. Enable Security Auth To
+              Secure Your ID.
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="p-0">
+            <img src={SplashImg} alt="Welcome" />
+          </Modal.Body>
+        </Modal>
+      )}
       <div className={`${style.menuWrapper} d-none d-xl-block`}>
         <nav>
           <ul>

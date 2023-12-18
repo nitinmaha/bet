@@ -312,11 +312,119 @@ const Rules = () => {
             </div>
           </>
         </Tab>
-        <Tab eventKey="profile" title="Profile">
-          Tab content for Profile
+        <Tab eventKey="profile" title="E Games">
+          <div class="rules-content-title">match</div>
+          <div class="rules-content-desc">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="text-danger">
+                        In the event of a match starting but not being
+                        completed, then all bets will be void.
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="text-danger">
+                        Company reserves the right to suspend/void any id/bets
+                        if the same is found to be illegitimate. For example
+                        incase of VPN/robot-use/multiple entry from same or
+                        different IP and others. Note : only winning bets will
+                        be voided.
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </Tab>
-        <Tab eventKey="contact" title="Contact">
-          Tab content for Contact
+        <Tab eventKey="contact" title="Basketball">
+          <div class="rules-content-title">match</div>
+          <div class="rules-content-desc">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="">
+                        Match Odds :- Predict which team will be the winner.
+                        There must be 5 minutes or less of scheduled game time
+                        left for bets to have action.
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="">
+                        Quarter Winner :- The quarter must be completed for bets
+                        to have action, unless settlement of bets is already
+                        determined.
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="">
+                        1st Half Winner / 2nd Half Winner :- The first half must
+                        be completed for first half bets to stand. If a game is
+                        postponed or cancelled after the start, for game and
+                        second half bets there must be 5 minutes or less
+                        remaining for bets to have action, unless settlement of
+                        bets is already determined. (Including Overtime if
+                        played.)
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="">
+                        Highest Scoring Half :- Predict in which half most
+                        points will be scored. OT is not included in 2nd Half.
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="text-danger">
+                        Company reserves the right to suspend/void any id/bets
+                        if the same is found to be illegitimate. For example
+                        incase of VPN/robot-use/multiple entry from same or
+                        different IP and others. Note : only winning bets will
+                        be voided.
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </Tab>
+
+        <Tab eventKey="motogp" title="MotoGP">
+          <div class="rules-content-title">match</div>
+          <div class="rules-content-desc">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="text-danger">
+                        Company reserves the right to suspend/void any id/bets
+                        if the same is found to be illegitimate. For example
+                        incase of VPN/robot-use/multiple entry from same or
+                        different IP and others. Note : only winning bets will
+                        be voided.
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </Tab>
       </Tabs>
     </div>
