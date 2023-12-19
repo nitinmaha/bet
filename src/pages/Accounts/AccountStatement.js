@@ -146,7 +146,7 @@ const AccountStatement = () => {
                         </th>
                       </tr>
                     </thead>
-                    <tbody role="rowgroup">
+                    <tbody>
                       <tr role="row">
                         <td role="cell" className="report-date">
                           12/12/2023 11:10:00

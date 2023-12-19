@@ -160,7 +160,7 @@ const CurrentBet = () => {
                         </th>
                       </tr>
                     </thead>
-                    <tbody role="rowgroup" />
+                    <tbody />
                   </table>
                 </div>
               </div>

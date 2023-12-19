@@ -98,7 +98,7 @@ const CasinoResults = () => {
                         </th>
                       </tr>
                     </thead>
-                    <tbody role="rowgroup" />
+                    <tbody />
                   </table>
                 </div>
               </div>
