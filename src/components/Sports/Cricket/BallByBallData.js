@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { Modal } from "react-bootstrap";
 
 const BallByBallData = () => {
+  const [show, setShow] = useState(false);
+
+  const openModalHandler = () => {
+    setShow(!show);
+  };
   return (
     <>
       <div className="iframe-container">
@@ -240,10 +246,13 @@ const BallByBallData = () => {
         </div>
         <div className="casino-remark mt-1">
           <div className="remark-icon">
-            <img src="https://g1ver.sprintstaticdata.com/v12/static/front/img/icons/remark.png" alt="sprint" />
+            <img
+              src="https://g1ver.sprintstaticdata.com/v12/static/front/img/icons/remark.png"
+              alt="sprint"
+            />
           </div>
           <div className="moving-text-wrap">
-            <div class="moving-text">
+            <div className="moving-text">
               Results are based on stream only. Score board may be different or
               updated later.
             </div>
@@ -256,18 +265,68 @@ const BallByBallData = () => {
           </span>
         </div>
         <div className="casino-last-results">
-          <span className="result result-b">R</span>
-          <span className="result result-b">R</span>
-          <span className="result result-b">R</span>
-          <span className="result result-b">R</span>
-          <span className="result result-b">R</span>
-          <span className="result result-b">R</span>
-          <span className="result result-b">R</span>
-          <span className="result result-b">R</span>
-          <span className="result result-b">R</span>
-          <span className="result result-b">R</span>
+          <span className="result result-b" onClick={openModalHandler}>
+            R
+          </span>
+          <span className="result result-b" onClick={openModalHandler}>
+            R
+          </span>
+          <span className="result result-b" onClick={openModalHandler}>
+            R
+          </span>
+          <span className="result result-b" onClick={openModalHandler}>
+            R
+          </span>
+          <span className="result result-b" onClick={openModalHandler}>
+            R
+          </span>
+          <span className="result result-b" onClick={openModalHandler}>
+            R
+          </span>
+          <span className="result result-b" onClick={openModalHandler}>
+            R
+          </span>
+          <span className="result result-b" onClick={openModalHandler}>
+            R
+          </span>
+          <span className="result result-b" onClick={openModalHandler}>
+            R
+          </span>
+          <span className="result result-b" onClick={openModalHandler}>
+            R
+          </span>
         </div>
       </div>
+      {show && (
+        <Modal size="xl" show={show} onHide={openModalHandler} scrollable>
+          <Modal.Header closeButton>
+            <Modal.Title>Ball By Ball Results</Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="">
+            <div className="casino-result-modal">
+              <div className="casino-result-round-id">
+                <span>
+                  <b>Round Id: </b> 5533536498601
+                </span>
+                <span>
+                  <b>Match Time: </b>19/12/2023 11:00:52
+                </span>
+              </div>
+              <div className="row mt-2">
+                <div className="text-center">
+                  <div className="cricket20ballpopup cricket20ballresult">
+                    <img
+                      src="https://g1ver.sprintstaticdata.com/v12/static/front/img/balls/ball-blank.png"
+                      alt="Ball"
+                    />
+                    <span>0 Run</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
+      )}
     </>
   );
 };

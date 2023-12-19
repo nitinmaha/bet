@@ -361,7 +361,12 @@
     width: 55px;
   }
 
+
   @include media-breakpoint-up(xxl) {
+    width: 60px;
+  }
+
+  @include media-breakpoint-between(md, xl) {
     width: 60px;
   }
 
@@ -405,6 +410,11 @@
   @include media-breakpoint-up(xxl) {
     width: 60px;
   }
+
+  @include media-breakpoint-between(md, xl) {
+    width: 60px;
+  }
+
 
   @include media-breakpoint-down(md) {
     display: none;
@@ -780,6 +790,12 @@
       @include media-breakpoint-up(xxl) {
         width: 180px;
       }
+
+
+      @include media-breakpoint-between(md, xl) {
+        width: 180px;
+      }
+
 
       @include media-breakpoint-down(md) {
         width: 40%;
@@ -1217,4 +1233,167 @@
   .ball-by-ball .market-6 .blb-box .market-odd-box {
     width: 100%;
   }
+}
+
+.casino-result-round-id {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cricket20ballresult {
+  position: relative;
+  width: auto;
+  left: unset;
+  top: unset;
+  margin: 0;
+  display: inline-block;
+  animation: none;
+}
+
+.cricket20ballpopup img {
+  width: 150px;
+}
+
+.cricket20ballpopup span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+}
+
+.place-bet-box-header {
+  background-color: $gray-c;
+  color: $black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 4px 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.place-bet-box-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 8px 5px;
+  color: $black;
+  font-size: 14px;
+  border-bottom: 1px solid $gray-c;
+}
+
+.place-bet-for {
+  width: calc(100% - 230px);
+  display: flex;
+  align-items: center;
+  line-height: normal;
+}
+
+.lottery-sidebar .place-bet-for {
+  width: calc(100% - 90px);
+}
+
+.place-bet-for span {
+  max-width: calc(100% - 30px);
+  font-weight: bold;
+}
+
+.place-bet-odds {
+  width: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.place-bet-odds input {
+  width: calc(100% - 20px);
+}
+
+.place-bet-stake {
+  width: 80px;
+  margin-left: 10px;
+}
+
+.place-bet-stake input {
+  width: 80px;
+}
+
+.place-bet-profit {
+  width: 80px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.place-bet-box-body i {
+  font-size: 12px;
+}
+
+.place-bet-box-body input {
+  height: 24px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  font-size: 12px;
+  padding: 5px;
+  border: 0;
+}
+
+.place-bet-box-body .btn-default {
+  height: 12px;
+  line-height: 12px;
+  min-width: 20px;
+  width: 20px;
+  vertical-align: top;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border: 0;
+  background-color: $gray-c;
+  color: $black;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.place-bet-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 10px 5px 10px;
+}
+
+.place-bet-buttons .btn-place-bet {
+  width: 19%;
+  padding: 5px;
+  background-color: $gray-c !important;
+  color: $black !important;
+  border: 0;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.place-bet-action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px 5px 10px;
+}
+
+.place-bet-action-buttons .btn {
+  min-width: 80px;
 }

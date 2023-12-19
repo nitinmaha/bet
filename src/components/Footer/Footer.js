@@ -55,7 +55,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <p class="text-center">© Copyright 2023. All Rights Reserved. Powered by UP247.</p>
+      <p className="text-center">© Copyright 2023. All Rights Reserved. Powered by UP247.</p>
     </div>
   );
 };

@@ -26,6 +26,9 @@ const BallByBall = () => {
 
   useEffect(() => {
     document.body.classList.add("details-page");
+    return () => {
+      document.body.classList.remove("details-page");
+    };
   }, []);
 
   return (

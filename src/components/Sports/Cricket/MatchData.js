@@ -1,6 +1,6 @@
 import React from "react";
 
-const MatchData = () => {
+const MatchData = ({ showPlaceBetHandler }) => {
   return (
     <>
       <div className="scorecard">
@@ -68,8 +68,10 @@ const MatchData = () => {
               <span className="market-nation-name">South Africa</span>
               <div className="market-nation-book" />
             </div>
-            <div className="market-odd-box   back2 ">
-              <span className="market-odd">75</span>
+            <div className="market-odd-box back2" onClick={showPlaceBetHandler}>
+              <span className="market-odd">
+                75
+              </span>
               <span className="market-volume">49.95</span>
             </div>
             <div className="market-odd-box  back1  ">
@@ -194,7 +196,7 @@ const MatchData = () => {
           </div>
         </div>
         <div className="market-row">
-          <div class="moving-text">
+          <div className="moving-text">
             Play World's Fastest Cricket Game Ball By Ball,Started In Our
             Exchange!!!
           </div>
@@ -244,7 +246,7 @@ const MatchData = () => {
           </div>
         </div>
         <div className="market-row">
-          <div class="moving-text">
+          <div className="moving-text">
             Virtual Cricket Bookmaker Bets Started In Our Exchange
           </div>
         </div>
@@ -292,7 +294,7 @@ const MatchData = () => {
           </div>
         </div>
         <div className="market-row">
-          <div class="moving-text">
+          <div className="moving-text">
             Zimbabwe vs Ireland Match Bets Started In Our Exchange
           </div>
         </div>

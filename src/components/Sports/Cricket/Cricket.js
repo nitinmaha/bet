@@ -9,9 +9,16 @@ import "./Cricket.scss";
 //images
 import liveTv from "../../../assets/lock.jpg";
 import MatchData from "./MatchData";
+import PlaceBet from "./PlaceBet";
 
 const Cricket = () => {
   const [scroll, setScroll] = useState(false);
+
+  const [placeBet, setPlaceBet] = useState("");
+
+  const showPlaceBetHandler = () => {
+    setPlaceBet(!placeBet);
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -21,6 +28,9 @@ const Cricket = () => {
 
   useEffect(() => {
     document.body.classList.add("details-page");
+    return () => {
+      document.body.classList.remove("details-page");
+    };
   }, []);
 
   return (
@@ -32,9 +42,9 @@ const Cricket = () => {
               <span>South Africa v India</span>
               <span className="float-right">17/12/2023 13:30:00</span>
             </div>
-            <div className="d-xl-none">
+            <div className="d-xl-none w-100">
               <Tabs
-                defaultActiveKey="profile"
+                defaultActiveKey="home"
                 id="uncontrolled-tab-example"
                 className=""
               >
@@ -43,10 +53,10 @@ const Cricket = () => {
                   title="
                   Odds"
                 >
-                  <MatchData />
+                  <MatchData showPlaceBetHandler={showPlaceBetHandler} />
                 </Tab>
                 <Tab eventKey="profile" title="Matched Bet (0)">
-                  <Accordion defaultActiveKey={["0", "1"]} alwaysOpen>
+                  <Accordion defaultActiveKey={["1", "2"]} alwaysOpen>
                     <Accordion.Item eventKey="0">
                       <Accordion.Header>Live Match</Accordion.Header>
                       <Accordion.Body>
@@ -55,7 +65,9 @@ const Cricket = () => {
                         </div>
                       </Accordion.Body>
                     </Accordion.Item>
-                    <Accordion.Item eventKey="1">
+
+                    {placeBet && <PlaceBet onclickHide={showPlaceBetHandler} />}
+                    <Accordion.Item eventKey="2">
                       <Accordion.Header>Others</Accordion.Header>
                       <Accordion.Body>
                         <div className="my-bets">
@@ -86,17 +98,17 @@ const Cricket = () => {
               </Tabs>
             </div>
             <div className="d-none d-xl-flex flex-wrap">
-              <MatchData />
+              <MatchData showPlaceBetHandler={showPlaceBetHandler} />
             </div>
           </div>
         </div>
-        <div className={`${scroll && 'active'} sidebar right-sidebar`}>
+        <div className={`${scroll && "active"} sidebar right-sidebar`}>
           <a className="bet-nation-game-name" href="/casino/ballbyball">
             <i className="fas fa-info-circle" />
             <span>Ball by Ball</span>
           </a>
 
-          <Accordion defaultActiveKey={["0", "1"]} alwaysOpen>
+          <Accordion defaultActiveKey={["1", "2"]} alwaysOpen>
             <Accordion.Item eventKey="0">
               <Accordion.Header>Live Match</Accordion.Header>
               <Accordion.Body>
@@ -105,8 +117,9 @@ const Cricket = () => {
                 </div>
               </Accordion.Body>
             </Accordion.Item>
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>Others</Accordion.Header>
+            {placeBet && <PlaceBet onclickHide={showPlaceBetHandler} />}
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>My Bet</Accordion.Header>
               <Accordion.Body>
                 <div className="my-bets">
                   <div className="table-responsive w-100">

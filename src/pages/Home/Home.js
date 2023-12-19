@@ -96,7 +96,7 @@ const Home = () => {
                 </div>
                 <div className="bet-table-row">
                   <div className="bet-nation-name">
-                    <Link className="bet-nation-game-name" href="#">
+                    <Link className="bet-nation-game-name" to="/cricket-detail">
                       <span>Dolphins v Lions</span>
                       <span className="d-none d-md-inline-block">
                         &nbsp;/&nbsp;

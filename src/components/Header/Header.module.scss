@@ -50,7 +50,7 @@
 
 .rules {
   cursor: pointer;
-  
+
   @include media-breakpoint-down(xl) {
     display: none;
   }
@@ -82,10 +82,11 @@
   @include media-breakpoint-down(xl) {
     text-align: right;
 
-    > div:last-child {
+    >div:last-child {
       display: flex;
       align-items: center;
     }
+
     .dropdown {
       display: inline-block;
       @include margin-left(5px);
@@ -111,6 +112,7 @@
     border: none;
     box-shadow: none;
     padding: 0;
+    color: $white !important;
 
     @include media-breakpoint-down(xl) {
       @include font-size(14px);

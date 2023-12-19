@@ -65,7 +65,7 @@ const Login = ({loginHandler}) => {
         </div>
         <div className={style.btnRow}>
           <Button type="button" color="primary-btn" onClick={loginButtonHandler}>
-            Login <i class="fas fa-sign-in-alt float-end mt-1"></i>
+            Login <i className="fas fa-sign-in-alt float-end mt-1"></i>
           </Button>
         </div>
         <div className={style.btnRow}>
@@ -74,7 +74,7 @@ const Login = ({loginHandler}) => {
             color="primary-btn"
             onClick={loginButtonHandler}
           >
-            Login with demo ID <i class="fas fa-sign-in-alt float-end mt-1"></i>
+            Login with demo ID <i className="fas fa-sign-in-alt float-end mt-1"></i>
           </Button>
         </div>
         <div className={style.smallText}>

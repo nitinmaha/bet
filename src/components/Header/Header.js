@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
+import Button from "../Button/Button";
 import Modal from "react-bootstrap/Modal";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 
 //scss
 import style from "./Header.module.scss";
@@ -14,13 +16,19 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { Link } from "react-router-dom";
 import Rules from "../Rules/Rules";
+import ButtonValues from "../ButtonValues/ButtonValues";
 
 const Header = () => {
   const [searchInput, setSearchInput] = useState();
   const [show, setShow] = useState(false);
+  const [valuesModal, setValuesModal] = useState(false);
 
   const showModal = () => {
     setShow(!show);
+  };
+
+  const showValuesModalhander = () => {
+    setValuesModal(!valuesModal);
   };
 
   const showSearch = () => {
@@ -34,7 +42,7 @@ const Header = () => {
 
   const userButton = (
     <div>
-      Demo<i class="fas fa-chevron-down ms-1"></i>
+      Demo<i className="fas fa-chevron-down ms-1"></i>
     </div>
   );
 
@@ -62,21 +70,19 @@ const Header = () => {
         <div className={`${style.rules} ms-3`}>
           <strong onClick={showModal}>Rules</strong>
         </div>
-        {show && (
-          <Modal size="xl" show={show} onHide={showModal} scrollable>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <Rules />
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="danger" onClick={showModal}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        )}
+        <Modal size="xl" show={show} onHide={showModal} scrollable>
+          <Modal.Header closeButton>
+            <Modal.Title>Rules</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Rules />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="danger" onClick={showModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
         <div className={`${style.userBalance} ms-1 ms-xl-3`}>
           <div className="">
             <span>Balance:</span>
@@ -103,10 +109,29 @@ const Header = () => {
         </div>
         <div className={`${style.userDropdown} ms-3 d-none d-xl-block`}>
           <DropdownButton align="end" title={userButton} id="demo-id">
-            <Dropdown.Item eventKey="1">Account Statement</Dropdown.Item>
-            <Dropdown.Item eventKey="2">Current Bet</Dropdown.Item>
-            <Dropdown.Item eventKey="3">Casino Results</Dropdown.Item>
-            <Dropdown.Item eventKey="4">Set Button Values</Dropdown.Item>
+            <Link to="account/ball-by-ball" className="dropdown-item">
+              Account Statement
+            </Link>
+            <Link to="account/current-bet" className="dropdown-item">
+              Current Bet
+            </Link>
+            <Link to="account/casino-results" className="dropdown-item">
+              Casino Results
+            </Link>
+            <Link
+              onClick={showValuesModalhander}
+              className="dropdown-item"
+            >
+              Set Button Values
+            </Link>
+            <Modal show={valuesModal} onHide={showValuesModalhander} scrollable>
+              <Modal.Header closeButton>
+                <Modal.Title>Set Button Value</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <ButtonValues onclick={showValuesModalhander} />
+              </Modal.Body>
+            </Modal>
             <Dropdown.Divider />
             <Dropdown.Item eventKey="5" onClick={logOut}>
               SignOut

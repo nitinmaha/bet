@@ -14,9 +14,9 @@ const LiveEvents = () => {
   ];
   return (
     <div className={style.liveEventsList}>
-      {events.map((event) => {
+      {events.map((event, index) => {
         return (
-          <div className={style.list}>
+          <div key={index} className={style.list}>
             <Link className="blink_me">
               <span className="me-1">
                 <i className="far fa-futbol"></i>

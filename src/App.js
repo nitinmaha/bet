@@ -18,6 +18,9 @@ import Poker from "./pages/Poker/Poker";
 import Lucky7 from "./pages/Lucky7/Lucky7";
 import CricketDetail from "./pages/Details/CricketDetail";
 import BallByBall from "./components/Sports/Cricket/BallByBall";
+import AccountStatement from "./pages/Accounts/AccountStatement";
+import CurrentBet from "./pages/Accounts/CurrentBet";
+import CasinoResults from "./pages/Accounts/CasinoResults";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -55,6 +58,9 @@ function App() {
             <Route path="lucky7" element={<Lucky7 />} />
             <Route path="cricket-detail" element={<CricketDetail />} />
             <Route path="ball-by-ball" element={<BallByBall />} />
+            <Route path="account/ball-by-ball" element={<AccountStatement />} />
+            <Route path="account/current-bet" element={<CurrentBet />} />
+            <Route path="account/casino-results" element={<CasinoResults />} />
           </Route>
         </Routes>
       )}

@@ -149,6 +149,24 @@ a {
   }
 }
 
+.form-control,
+.form-select {
+    background-color: $white !important;
+    color: $black !important;
+    border-color: $gray-d !important;
+    padding: 5px;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-control:hover,
+.form-select:hover,
+.form-control:active,
+.form-select:active {
+    box-shadow: none;
+    border-color: $gray-b !important;
+}
+
 /*Table*/
 
 .table {
@@ -163,7 +181,7 @@ tfoot,
 th,
 thead,
 tr {
-  border-color: $xlt-gray;
+  border-color: $gray-c;
 }
 
 .table tbody th {
@@ -173,6 +191,11 @@ tr {
 .table tbody tr {
   background-color: $gray-c;
   border-color: $gray-c;
+}
+
+.form-check-input:checked {
+  background-color: $branding2;
+  border-color: $branding2;
 }
 
 .table tbody {
@@ -365,30 +388,6 @@ tr {
   color: #273a47;
 }
 
-.back {
-  background-color: #72bbef !important;
-}
-
-.back1 {
-  background-color: #72bbefbf !important;
-}
-
-.back2 {
-  background-color: #72bbef7f !important;
-}
-
-.lay {
-  background-color: #faa9ba !important;
-}
-
-.lay1 {
-  background-color: #faa9babf !important;
-}
-
-.lay2 {
-  background-color: #faa9ba7f !important;
-}
-
 .casino-list {
   display: flex;
   flex-wrap: wrap;
@@ -527,4 +526,64 @@ tr {
     opacity: 1;
     box-shadow: none;
   }
+}
+
+.card {
+  box-shadow: 0 0 5px #a4a4a4;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-header {
+  background-color: $branding2;
+  color: $white;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+/*Pagination*/
+
+.page-link {
+  color: $black;
+}
+
+.page-item.active .page-link {
+  background-color: $branding2;
+  border-color: $branding2;
+}
+
+
+.back {
+  background-color: $blue !important;
+}
+
+.back1 {
+  background-color: $blue-1 !important;
+}
+
+.back2 {
+  background-color: $blue-2 !important;
+}
+
+.lay {
+  background-color: $lay !important;
+}
+
+.lay1 {
+  background-color: $lay-1 !important;
+}
+
+.lay2 {
+  background-color: $lay-2 !important;
+}
+
+
+.btn-info {
+  background-color: var(--bg-info);
+  color: #fff;
+  border-color: var(--bg-info);
 }
