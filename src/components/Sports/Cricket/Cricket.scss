@@ -1396,4 +1396,16 @@
 
 .place-bet-action-buttons .btn {
   min-width: 80px;
+
+  &.btn-info {
+    background-color: $green-lt;
+    color: #fff;
+    border-color: $green-lt;
+
+    &:hover {
+      background-color: $green-lt;
+      color: #fff;
+      border-color: $green-lt;
+    }
+  }
 }
